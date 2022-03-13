@@ -1,2 +1,3 @@
-# assync-task-simplified
+# Assync Task Simplified
  
+Async Tasks Simplified is a simple and powerful class designed for use in Java and Android. Async Tasks Simplified allows you to run slow or time-consuming code in another background thread, such as network request code, file processing, etc. Async Tasks Simplified was based on but not copied from Android's AsyncTask class, which is now marked Obsolete by Google. Async Tasks Simplified was born with the idea of bringing a simple, clean and intuitive code to do background tasks.
