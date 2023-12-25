@@ -1,6 +1,13 @@
 # Async Tasks Simplified
+
+Async Tasks Simplified is a small utility script that allows your application to execute code in another Background Thread easily, in addition to allowing your Background code to call code in the Main Thread easily. Currently, Async Tasks Simplified supports Java and C#!
+
+Async Tasks Simplified allows you to run slow or time-consuming code in another background thread, such as network request code, file processing, changes to the UI based on timing or anything that would freeze your UI if executed in Main Thread. Async Tasks Simplified was based on but not copied from Android's AsyncTask class, which is now marked Obsolete by Google. Async Tasks Simplified was born with the idea of bringing a simple, clean and intuitive code to do background tasks.
+
+# tmp
+tmp 
+
  
-Async Tasks Simplified is a simple and powerful class designed for use in Java and Android. Async Tasks Simplified allows you to run slow or time-consuming code in another background thread, such as network request code, file processing, etc. Async Tasks Simplified was based on but not copied from Android's AsyncTask class, which is now marked Obsolete by Google. Async Tasks Simplified was born with the idea of bringing a simple, clean and intuitive code to do background tasks.
 
 # How it works?
 
