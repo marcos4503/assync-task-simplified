@@ -69,16 +69,15 @@ The code registered here MUST return, at some point, a array of String containin
 
 <h3>onNewProgress_RunMainThread</h3>
 
-
+This step is only executed, ONLY if during step "onExecuteTask_RunBackground", your code calls `threadTools.ReportNewProgress("Example");` reporting a String containing progress. In this step, the registered code is executed in the Main Thread, and in this step you have access to the Context that started the Task and you also have access to the String that was informed when calling `threadTools.ReportNewProgress("Example");`.
 
 <h3>onDoneTask_RunMainThread</h3>
 
-dsds
+This step is executed AUTOMATICALLY as soon as step "onExecuteTask_RunBackground" is completely finished, that is, when step "onExecuteTask_RunBackground" returns some result using a code such as `return new String[]{}`.
 
+At this stage, the registered code is also executed on the Main Thread. Furthermore, in this step the registered code has easy access to the Context that started the Task, and the array of Strings that was returned by the code in step "onExecuteTask_RunBackground".
 
-
-
-Remember that each method of this class has a description that can be seen in the auto complete of your IDE (like Android Studio) or in the class itself, so you can read the descriptions of the methods to better understand how each one works and its details.
+<b>HINT:</b> Each method of this class has a description that can be seen in the auto complete of your IDE (like Android Studio) or in the class itself, so you can read the descriptions of the methods to better understand how each one works and its details.
 
 
 
