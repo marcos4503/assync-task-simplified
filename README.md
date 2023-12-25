@@ -36,7 +36,8 @@ new AsyncTaskSimplified(context, new AsyncTaskSimplified.Listener() {
             //Report a new progress
             threadTools.ReportNewProgress("100%");
 
-            return new String[0];
+            //Return the result of this background code...
+            return new String[] { };
         }
 
         @Override
@@ -81,13 +82,41 @@ At this stage, the registered code is also executed on the Main Thread. Furtherm
 
 # And how to use it in C#?
 
-s
+Overall, Async Tasks Simplified in C# works exactly as it would in Java, with just a few syntax differences. The code shown above in Java would look like this in C#...
 
+```csharp
+AsyncTaskSimplified asyncTask = new AsyncTaskSimplified(this, new string[] { "Parameter 1", "Parameter 2" });
+asyncTask.onStartTask_RunMainThread += (callerWindow, startParams) => 
+{
+    //Run before background code, this will run on UI/Main Thread
+};
+asyncTask.onExecuteTask_RunBackground += (callerWindow, startParams, threadTools) =>
+{
+    //Here is the code that should be executed in Background Thread.
+    //This will return some result to the "onDoneTask_RunMainThread"
 
+    //Make thread sleep
+    threadTools.MakeThreadSleep(3000);
 
+    //Report a new progress
+    threadTools.ReportNewProgress("100%");
 
+    //Return the result of this background code...
+    return new string[] { };
+};
+asyncTask.onNewProgress_RunMainThread += (callerWindow, newProgress) =>
+{
+    //Run when background thread (onExecuteTask_RunBackground) calls
+    //"threadTools.ReportNewProgress()", this will run on UI/Main Thread
+};
+asyncTask.onDoneTask_RunMainThread += (callerWindow, backgroundResult) =>
+{
+    //Run after Background Code finishes, this will run on UI/Main Thread
+};
+asyncTask.Execute(AsyncTaskSimplified.ExecutionMode.NewDefaultThread);
+```
 
-
+<b>HINT:</b> Each method of this class has a description that can be seen in the auto complete of your IDE (like Visual Studio) or in the class itself, so you can read the descriptions of the methods to better understand how each one works and its details.
 
 # Support projects like this
 
