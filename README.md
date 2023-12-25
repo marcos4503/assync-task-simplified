@@ -8,7 +8,7 @@ Async Tasks Simplified allows you to run slow or time-consuming code in another 
 
 Async Tasks Simplified works much like similar to the standard Android AsyncTask class. After a few years the AsyncTask API was marked Obsolete by Google and the Async Tasks Simplified was created to be a simple replacement for the AsyncTask class. Initially I wrote the class for Java only, but here you will also see examples of use for other languages.
 
-Firstly, you must create a new "AsyncTaskSimplified" object and then register the callbacks that will execute your code at each step of executing your Task, in addition to passing the start parameters. The start parameters are `strings` that you can define, which will be available in the start and execution stages of your code in the background.
+Firstly, you must create a new "AsyncTaskSimplified" object and then register the callbacks that will execute your code at each step of executing your Task, in addition to passing the start parameters. The start parameters are `strings` that you can define, which will be available in the start and execution stages of your code in the background. By registering all callbacks from all steps, and starting the Async Task, your code will be executed in the Background, and you will have Callbacks that will execute your code, before, during and after the code that is executed in the Background. It's quite simple!
 
 In Java (Android Studio) only, the Async Tasks Simplified gives you the option to run your code in normal Threads or in native Java Executors, you are able to choose for example if your background code should run in Serial with other Async Tasks in a single Thread, or if your Async Task should run in parallel with other Async Tasks in a Thread Pool.
 
@@ -79,7 +79,9 @@ At this stage, the registered code is also executed on the Main Thread. Furtherm
 
 <b>HINT:</b> Each method of this class has a description that can be seen in the auto complete of your IDE (like Android Studio) or in the class itself, so you can read the descriptions of the methods to better understand how each one works and its details.
 
+# And how to use it in C#?
 
+s
 
 
 
