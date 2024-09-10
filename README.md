@@ -126,7 +126,7 @@ If you liked this Class and found it useful for your projects, please consider m
 
 <p align="center">
     <a href="https://www.paypal.com/donate/?hosted_button_id=MVDJY3AXLL8T2" target="_blank">
-        <img src="Async-Tasks-Simplified-Source/Resources/paypal-donate.png" alt="Donate" />
+        <img src="Source-Code/Resources/paypal-donate.png" alt="Donate" />
     </a>
 </p>
 
