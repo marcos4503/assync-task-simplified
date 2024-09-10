@@ -6,7 +6,7 @@ Async Tasks Simplified allows you to run slow or time-consuming code in another 
 
 # How it works?
 
-Async Tasks Simplified works much like similar to the standard Android AsyncTask class. After a few years the AsyncTask API was marked Obsolete by Google and the Async Tasks Simplified was created to be a simple replacement for the AsyncTask class. Initially I wrote the class for Java only, but here you will also see examples of use for other languages.
+Async Tasks Simplified works much like similar to the standard Android `AsyncTask` class. After a few years the `AsyncTask` API was marked Obsolete by Google and the Async Tasks Simplified was created to be a simple replacement for the `AsyncTask` class. Initially I wrote the class for Java only, but here you will also see examples of use for other languages.
 
 Firstly, you must create a new "AsyncTaskSimplified" object and then register the callbacks that will execute your code at each step of executing your Task, in addition to passing the start parameters. The start parameters are `strings` that you can define, which will be available in the start and execution stages of your code in the background. By registering all callbacks from all steps, and starting the Async Task, your code will be executed in the Background, and you will have Callbacks that will execute your code, before, during and after the code that is executed in the Background. It's quite simple!
 
