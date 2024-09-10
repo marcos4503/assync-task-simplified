@@ -14,7 +14,7 @@ In Java (Android Studio) only, the Async Tasks Simplified gives you the option t
 
 # How to use?
 
-First, clone this repository, and copy the `AsyncTaskSimplified` file that is in the `Async-Tasks-Simplified-Source` folder of this repository. Copy the file that refers to the language you need. Then add it to your project. Now just follow the information below!
+First, clone this repository, and copy the `AsyncTaskSimplified` file that is in the `Source-Code` folder of this repository. Copy the file that refers to the language/framework you need. Then add it to your project. Now just follow the information below!
 
 In Java, to start an Async Task, you can use the example code below...
 
@@ -66,7 +66,7 @@ In this step, the code registered here is executed completely in another Thread 
 
 The `ThreadTools` is an object that only exists in the "onExecuteTask_RunBackground" event and with it you are able to make the Thread sleep for as many milliseconds as you want, and it is also capable of Reporting New Progress, which will activate the next step that you will see below.
 
-The code registered here MUST return, at some point, a array of String containing the result of the code that was executed in the Background. This can be done easily just using something like "return new String[]{}".
+The code registered here MUST return, at some point, a array of String containing the result of the code that was executed in the Background. This can be done easily just using something like `return new String[]{ }`.
 
 <h3>onNewProgress_RunMainThread</h3>
 
@@ -74,7 +74,7 @@ This step is only executed, ONLY if during step "onExecuteTask_RunBackground", y
 
 <h3>onDoneTask_RunMainThread</h3>
 
-This step is executed AUTOMATICALLY as soon as step "onExecuteTask_RunBackground" is completely finished, that is, when step "onExecuteTask_RunBackground" returns some result using a code such as `return new String[]{}`.
+This step is executed AUTOMATICALLY as soon as step "onExecuteTask_RunBackground" is completely finished, that is, when step "onExecuteTask_RunBackground" returns some result using a code such as `return new String[]{ }`.
 
 At this stage, the registered code is also executed on the Main Thread. Furthermore, in this step the registered code has easy access to the Context that started the Task, and the array of Strings that was returned by the code in step "onExecuteTask_RunBackground".
 
